@@ -3,36 +3,37 @@ import propTypes from 'prop-types'
 
 export default class CategoryItem extends Component {
     render() {
-    
+
+        const {category} = this.props;
+
         return (
-            <div className="row margin-bottom-50">
-                <div className="col-md-4 md-margin-bottom-30">
+
+            <div className="col-md-4 md-margin-bottom-30">
                     <div className="overflow-h">
                         <a className="illustration-v3 illustration-img1" href="#">
                             <span className="illustration-bg">
                                 <span className="illustration-ads">
                                 <span className="illustration-v3-category">
-                                    <span className="product-category">Men</span>
-                                    <span className="product-amount">56 Items</span>
+                                    <span className="product-category">{category.name}</span>
+                                    <span className="product-amount">{category.amount}</span>
                                 </span>
                                 </span>
                             </span>
                         </a>
                     </div>
-                </div>     
-            </div>
+                </div> 
+        
         );
     }
 }
 
 CategoryItem.propTypes = {
-    category: propTypes.array
+    category: propTypes.object
 }
 
 CategoryItem.defaultProps = {
-    category: [
-        {
-        
-        }
-    ]
+    category: {
+        name: "Men",
+        amount: "56 Items"
+    }
 }
