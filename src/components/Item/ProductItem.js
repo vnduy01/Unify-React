@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 
 export default class ProductItem extends Component {
     render() {
-        const productItem = [
-            1, 2, 3, 4, 5, 6
-        ];
+        const {product} = this.props;
 
         return (
-            <div className="illustration-v2 margin-bottom-60">
-                <div className="customNavigation margin-bottom-25">
-                    <a className="owl-btn prev rounded-x"><i className="fa fa-angle-left" /></a>
-                    <a className="owl-btn next rounded-x"><i className="fa fa-angle-right" /></a>
-                </div>
-                <ul className="list-inline owl-slider">
-                    {productItem.map((productItem, index) => 
+         
                     <li className="item">
                         <div className="product-img">
                             <a href="shop-ui-inner.html"><img className="full-width img-responsive" src="assets/img/blog/09.jpg" alt /></a>
@@ -23,12 +16,12 @@ export default class ProductItem extends Component {
                         <div className="product-description product-description-brd">
                             <div className="overflow-h margin-bottom-5">
                                 <div className="pull-left">
-                                    <h4 className="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                    <span className="gender text-uppercase">Men</span>
-                                    <span className="gender">Suits - Blazers</span>
+                                    <h4 className="title-price"><a href="shop-ui-inner.html">{product.name}</a></h4>
+                                    <span className="gender text-uppercase">{product.gender}</span>
+                                    <span className="gender">{product.category}</span>
                                 </div>
                                 <div className="product-price">
-                                    <span className="title-price">$95.00</span>
+                                    <span className="title-price">{product.price}</span>
                                 </div>
                             </div>
                             <ul className="list-inline product-ratings">
@@ -40,10 +33,22 @@ export default class ProductItem extends Component {
                                 <li className="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" className="tooltips" href="#"><i className="fa fa-heart" /></a></li>
                             </ul>
                         </div>
-                    </li>
-                    )}     
-                </ul>
-            </div>
+                    </li> 
+                
+        
         );
+    }
+}
+
+ProductItem.propTypes = {
+    product: propTypes.object
+}
+
+ProductItem.defaultProps = {
+    product: {
+        name: "name4",
+        gender: "man",
+        category: "cate4",
+        price: "300$"
     }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import propTypes from 'prop-types'
+import propTypes from 'prop-types';
 
 export default class CategoryItem extends Component {
     render() {
@@ -7,8 +7,8 @@ export default class CategoryItem extends Component {
         const {category} = this.props;
 
         return (
-
-            <div className="col-md-4 md-margin-bottom-30">
+            
+                <div className="col-md-4 md-margin-bottom-30">
                     <div className="overflow-h">
                         <a className="illustration-v3 illustration-img1" href="#">
                             <span className="illustration-bg">
@@ -21,8 +21,8 @@ export default class CategoryItem extends Component {
                             </span>
                         </a>
                     </div>
-                </div> 
-        
+                </div>     
+            
         );
     }
 }
