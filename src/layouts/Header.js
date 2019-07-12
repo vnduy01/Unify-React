@@ -4,7 +4,7 @@ import { BrowserRouter,Route,Link } from "react-router-dom";
 export default class Header extends Component {
     render() {
         return (
-        <BrowserRouter>
+        
             <div className="header-v5 header-static">
                 {/* Topbar v3 */}
 
@@ -20,9 +20,9 @@ export default class Header extends Component {
                                 <span className="icon-bar" />
                                 <span className="icon-bar" />
                             </button>
-                            <Link to="/"className="navbar-brand" >
+                            <a href="/"className="navbar-brand" >
                                 <img id="logo-header" src="assets/img/logo.png" alt="Logo" />
-                            </Link>
+                            </a>
                         </div>
                         {/* Shopping Cart */}
                         <div className="shop-badge badge-icons pull-right">
@@ -169,7 +169,7 @@ export default class Header extends Component {
                 </div>
                 {/* End Navbar */}
             </div>
-        </BrowserRouter>
+        
         );
     }
 }

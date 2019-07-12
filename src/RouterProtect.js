@@ -10,12 +10,12 @@ class RouterProtect extends Component {
     render() {
         return (
             <Switch>
-
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/login" component={FormLogin}/>
-                <Route exact path="/regist" component={FormRegist}/>
-                <Route exact path="/products" component={ProductList}/>
-                <Route exact path="/product/details" component={ProductDetails}/>
+                
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/login" component={FormLogin}/>
+                    <Route exact path="/regist" component={FormRegist}/>
+                    <Route exact path="/products" component={ProductList}/>
+                    <Route exact path="/product/details" component={ProductDetails}/>
 
             </Switch>
         )
